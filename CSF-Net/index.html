@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <!-- TODO: Replace with your lab's related works -->
+        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
+          <div class="work-info">
+            <!-- TODO: Replace with actual paper title -->
+            <h5>Paper Title 1</h5>
+            <!-- TODO: Replace with brief description -->
+            <p>Brief description of the work and its main contribution.</p>
+            <!-- TODO: Replace with venue and year -->
+            <span class="work-venue">Conference/Journal 2024</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <!-- TODO: Add more related works or remove extra items -->
+        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Paper Title 2</h5>
+            <p>Brief description of the work and its main contribution.</p>
+            <span class="work-venue">Conference/Journal 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Paper Title 3</h5>
+            <p>Brief description of the work and its main contribution.</p>
+            <span class="work-venue">Conference/Journal 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">CSF-Net: Context-Semantic Fusion Network for Large Mask Inpainting</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Chae-Yeon Heo</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yeong-Jun Cho</a><sup>1*</sup></span>
+                  <!-- <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span> -->
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">Chonnam National University</a><sup>1</sup><br>WACV 2026</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                        <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2511.07987" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/chaeyeonheo/CSF-Net.git" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2511.07987" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!--
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/banner_video.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+<!-- End teaser video -->
+
+
+
+
+<!-- Overall Framework -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">Overall Framework</h2>
+      <div class="content has-text-centered">
+        <!-- Framework 이미지 -->
+        <img src="static/images/fig3.jpg" alt="CSF-Net Overall Framework" style="max-width: 100%; height: auto;"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Overview of the proposed CSF-Net. (a) A pretrained amodal completion model generates multiple object completions, and context-inconsistent candidates are filtered out. (b) Dual Swin-Transformer encoders extract multi-scale features from the masked image and selected candidates, which are fused via a cross-attention fusion decoder. (c) Hierarchical pixel selection is performed using structural and perceptual scores to generate the final semantic guidance image.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Overall Framework -->
+
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            In this paper, we propose a semantic-guided framework to address the challenging problem of large-mask image inpainting, where essential visual content is missing and contextual cues are limited. To compensate for the limited context, we leverage a pretrained Amodal Completion (AC) model to generate structure-aware candidates that serve as semantic priors for the missing regions. We introduce Context-Semantic Fusion Network (CSF-Net), a transformer-based fusion framework that fuses these candidates with contextual features to produce a semantic guidance image for image inpainting. This guidance improves inpainting quality by promoting structural accuracy and semantic consistency. CSF-Net can be seamlessly integrated into existing inpainting models without architectural changes and consistently enhances performance across diverse masking conditions. Extensive experiments on the Places365 and COCOA datasets demonstrate that CSF-Net effectively reduces object hallucination while enhancing visual realism and semantic alignment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+<!-- Key Contributions -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2.5rem;">Key Contributions</h2>
+    <div class="content" style="font-size: 1.05rem; line-height: 1.8;">
+      <ul style="list-style-position: outside; padding-left: 1.5rem;">
+        <li style="margin-bottom: 1rem;">
+          <strong>First work to leverage amodal completion for semantic guidance</strong> in large-mask inpainting, addressing the challenge of limited contextual cues.
+        </li>
+        <li style="margin-bottom: 1rem;">
+          <strong>Transformer-based fusion framework</strong> that integrates contextual features and semantic priors through dual encoders and cross-attention fusion decoder.
+        </li>
+        <li style="margin-bottom: 1rem;">
+          <strong>Plug-and-play module</strong> that seamlessly integrates into existing inpainting models without requiring any architectural modifications.
+        </li>
+        <li style="margin-bottom: 1rem;">
+          <strong>Consistent performance improvements</strong> across diverse masking conditions on Places365 and COCOA datasets.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- End Key Contributions -->
+
+<!-- Technical Details -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 3rem;">Technical Details</h2>
+    
+    <!-- Semantic Guidance Generation (Figure 2) -->
+    <div style="margin-bottom: 5rem;">
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <img src="static/images/fig2.jpg" alt="Semantic Guidance Image Generation" style="max-width: 100%; height: auto;"/>
+        </div>
+        <div class="column is-6">
+          <div class="content">
+            <h3 class="title is-5" style="color: #080808; margin-bottom: 1.5rem;">Semantic Guidance Image Generation</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8;">
+              Overview of semantic guidance image  generation of CSF-Net. This image incorporates object-level semantic priors and serves as an input to the inpainting model.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Hierarchical Pixel Selection (Figure 4) -->
+    <div>
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <div class="content">
+            <h3 class="title is-5" style="color: #050505; margin-bottom: 1.5rem;">Hierarchical Pixel Selection</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8;">
+              (a) The Structure Score Network (SSN) and Perceptual Score Network (PSN) compute confidence scores at each scale using fused features and the masked input. Multi-scale consistency is enforced via learnable coefficients β. (b) At the finest scale, the highest-scoring candidate is selected for each pixel to form the semantic guidance image.
+            </p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <img src="static/images/fig4.jpg" alt="Hierarchical Pixel Selection in CSF-Net" style="max-width: 100%; height: auto;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Technical Details -->
+
+
+<!-- Results Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Results</h2>
+    <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto 3rem auto; font-size: 1.05rem;">
+      <p>
+        We proposed CSF-Net, a transformer-based fusion framework that introduces object-level semantic guidance into the image inpainting process. By leveraging a pretrained amodal completion model, CSF-Net generates multiple structure-aware semantic candidates, which are fused with contextual information to produce a semantic guidance image. This guidance enables more accurate and semantically aligned inpainting, particularly in challenging large-mask scenarios where contextual cues are limited. CSF-Net can be seamlessly integrated into various inpainting backbones without any architectural modifications, demonstrating both its generality and practicality for real-world applications. Extensive experiments on the Places365 and COCOA datasets demonstrate that CSF-Net consistently improves performance across multiple inpainting baselines and evaluation metrics.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Qualitative Results -->
+<section class="section hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h3 class="title is-4" style="display: inline-block; padding-bottom: 0.5rem; border-bottom: 2px solid #3273dc;">
+          Qualitative Results
+        </h3>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/quality_256.jpg" alt="Qualitative comparison on Places365 and COCOA datasets" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Qualitative comparison of all masking conditions on Places365 and COCOA datasets.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/0.8.jpg" alt="Qualitative results with 80% center box masks on Places365" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Qualitative results with 80% center box masks on Places365.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/0.5.jpg" alt="Qualitative results with 50% center box masks on Places365" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Qualitative results with 50% center box masks on Places365.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/random.jpg" alt="Qualitative results with 50-80% random masks on Places365" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Qualitative results with 50-80% random masks on Places365.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Qualitative Results -->
+
+<!-- Quantitative Results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h3 class="title is-4" style="display: inline-block; padding-bottom: 0.5rem; border-bottom: 2px solid #3273dc;">
+        Quantitative Results
+      </h3>
+    </div>
+    
+    <!-- Table 1 -->
+    <div class="content" style="margin-bottom: 4rem;">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <img src="static/images/Tab1_quantity.png" alt="Quantitative comparison on Places365 dataset" style="max-width: 100%; height: auto;" loading="lazy"/>
+      </div>
+      <p class="has-text-centered" style="font-size: 0.95rem; color: #4a4a4a; max-width: 900px; margin: 0 auto;">
+        <strong>Table 1.</strong> Quantitative comparison between state-of-the-art inpainting methods and our CSF-enhanced model (shown with ASUKA integration) at 256 × 256 resolution on Places365. Bold indicates the best performance for each metric.
+      </p>
+    </div>
+
+    <!-- Table 2: Places365 and COCOA side by side -->
+    <div class="content">
+      <div class="columns is-centered" style="margin-bottom: 1.5rem;">
+        <div class="column is-half">
+          <div style="text-align: center;">
+            <img src="static/images/Tab2_quantity_place.png" alt="Performance comparison with CSF-Net on Places365" style="max-width: 100%; height: auto;" loading="lazy"/>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div style="text-align: center;">
+            <img src="static/images/Tab2_quantity_cocoa.png" alt="Performance comparison with CSF-Net on COCOA" style="max-width: 100%; height: auto;" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+      <p class="has-text-centered" style="font-size: 0.95rem; color: #4a4a4a; max-width: 900px; margin: 0 auto;">
+        <strong>Table 2.</strong> Performance comparison of models with CSF-Net integration on Places365 and COCOA.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Quantitative Results -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{ Coming Soon
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
