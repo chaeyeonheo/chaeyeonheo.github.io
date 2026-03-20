@@ -79,33 +79,39 @@
           </tbody></table>
           
           <!-- Research Section -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2 style="font-size:1.5em;font-weight:bold;color:#222;margin-bottom:10px;">Research</h2>
-                <hr style="border: 0; height: 2px; background: #ddd; margin: 10px 0 20px 0;">
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-          <table style="width:100%;border:0px;border-spacing:0px 12px;border-collapse:separate;margin:auto;">
+          <table style="width:100%;border:0;margin:auto;">
             <tbody>
               <tr>
-                <td style="padding:20px;vertical-align:middle;">
-                  
+                <td style="padding:20px;">
+                  <h2 style="font-size:1.5em;font-weight:bold;color:#222;margin-bottom:10px;">Research</h2>
+                  <hr style="border:0;height:2px;background:#ddd;margin:10px 0 20px 0;">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Papers -->
+          <table style="width:100%;border:0;border-spacing:0;border-collapse:collapse;margin:auto;">
+            <tbody>
+
+              <!-- Under Review -->
+              <tr>
+                <td style="padding:0 20px;">
                   <div style="
                     background:#f9f9f9;
                     border-radius:12px;
                     box-shadow:0 2px 8px rgba(0,0,0,0.08);
                     padding:20px 24px;
+                    margin:8px 0;
                     display:flex;
                     align-items:center;
-                  ">
+                    transition:all 0.2s ease;
+                  "
+                  onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)';"
+                  >
 
                     <div style="line-height:1.6;">
-
-                      <!-- TITLE + BADGE -->
                       <div style="font-size:16px; font-weight:600;">
                         Image Inpainting
                         <span style="
@@ -120,63 +126,55 @@
                         </span>
                       </div>
 
-                      <!-- SUBMISSION -->
                       <div style="margin-top:4px; color:#888; font-size:14px;">
                         Submitted to ECCV 2026
                       </div>
 
-                      <!-- AUTHORS -->
                       <div style="margin-top:6px; font-size:14px;">
                         <strong>Chae-Yeon Heo</strong>,
                         <a href="https://sites.google.com/view/cvl-jnu/member/professor?authuser=0">
                           Yeong-Jun Cho*
                         </a>
                       </div>
-
                     </div>
-                  </div>
 
+                  </div>
                 </td>
               </tr>
-            </tbody>
-          </table>
 
-          <table style="width:100%;border:0px;border-spacing:0px 12px;border-collapse:separate;margin:auto;">
-            <tbody>
-
+              <!-- WACV -->
               <tr onmouseout="csfnet_stop()" onmouseover="csfnet_start()">
-                <td style="padding:20px;vertical-align:middle">
+                <td style="padding:0 20px;">
 
                   <div style="
                     background:#f9f9f9;
                     border-radius:12px;
                     box-shadow:0 2px 8px rgba(0,0,0,0.08);
                     padding:20px 24px;
+                    margin:8px 0;
                     display:flex;
                     align-items:center;
-                  ">
+                    transition:all 0.2s ease;
+                  "
+                  onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.12)';"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)';"
+                  >
 
                     <!-- IMAGE -->
                     <div style="width:26%; min-width:120px;">
                       <img id="csfnet_image" src="images/fig1.jpg"
-                        style="width:100%;border-radius:10px;display:block;">
+                        style="width:100%;border-radius:10px;">
                     </div>
 
                     <!-- TEXT -->
-                    <div style="
-                      flex:1;
-                      padding-left:20px;
-                      line-height:1.6;
-                    ">
+                    <div style="flex:1;padding-left:20px;line-height:1.6;">
 
-                      <!-- TITLE -->
                       <div style="font-size:16px; font-weight:600;">
                         <a href="https://chaeyeonheo.github.io/CSF-Net/" style="text-decoration:none; color:#1a73e8;">
                           CSF-Net: Context-Semantic Fusion Network for Large Mask Inpainting
                         </a>
                       </div>
 
-                      <!-- AUTHORS -->
                       <div style="margin-top:6px; font-size:14px;">
                         <strong>Chae-Yeon Heo</strong>,
                         <a href="https://sites.google.com/view/cvl-jnu/member/professor?authuser=0">
@@ -184,67 +182,58 @@
                         </a>
                       </div>
 
-                      <!-- VENUE -->
-                      <div style="
-                        margin-top:4px;
-                        font-size:14px;
-                        color:#555;
-                      ">
+                      <div style="margin-top:4px;font-size:14px;color:#555;">
                         <em>The IEEE/CVF Winter Conference on Applications of Computer Vision 2026 <strong>(WACV '26)</strong></em>
                       </div>
 
-                      <!-- LINKS -->
-                      <div style="
-                        margin-top:8px;
-                        font-size:14px;
-                      ">
+                      <div style="margin-top:8px;font-size:14px;">
                         <a href="https://chaeyeonheo.github.io/CSF-Net/">Project Page</a> /
                         <a href="https://openaccess.thecvf.com/content/WACV2026/papers/Heo_CSF-Net_Context-Semantic_Fusion_Network_for_Large_Mask_Inpainting_WACV_2026_paper.pdf">Paper</a> /
                         <a href="https://github.com/chaeyeonheo/CSF-Net">Code</a> /
                         <a href="https://arxiv.org/pdf/2511.07987">arXiv</a>
                       </div>
 
-                      <!-- DESCRIPTION -->
-                      <div style="
-                        margin-top:8px;
-                        font-size:14px;
-                        color:#333;
-                      ">
+                      <div style="margin-top:8px;font-size:14px;color:#333;">
                         A transformer-based network that combines contextual and semantic features for high-quality large mask image inpainting.
                       </div>
 
                     </div>
                   </div>
 
-                  <!-- HOVER SCRIPT 유지 -->
-                  <script type="text/javascript">
-                    function csfnet_start() {
-                      document.getElementById('csfnet_image').src = 'images/overall.jpg';
-                    }
-                    function csfnet_stop() {
-                      document.getElementById('csfnet_image').src = 'images/fig1.jpg';
-                    }
-                  </script>
-
                 </td>
               </tr>
 
             </tbody>
           </table>
-            
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:center;font-size:small;">
-                  Template adapted and modified from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>
+
+          <script>
+          function csfnet_start() {
+            document.getElementById('csfnet_image').src = 'images/overall.jpg';
+          }
+          function csfnet_stop() {
+            document.getElementById('csfnet_image').src = 'images/fig1.jpg';
+          }
+          </script>
+
+          </tbody>
+          </table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:center;font-size:small;">
+                    Template adapted and modified from 
+                    <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          </td>
+          </tr>
+          </table>
+          </body>
+          </html>
