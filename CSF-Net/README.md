@@ -1,6 +1,6 @@
 # Academic Project Page Template
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+<!-- > **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
 
 A clean, responsive template for academic project pages.
 
@@ -71,7 +71,7 @@ Create a 1200x630px social preview image at `static/images/social_preview.png`.
 - Compress images with [TinyPNG](https://tinypng.com)
 - Use YouTube for large videos (>10MB)  
 - Replace the favicon in `static/images/`
-- Works with GitHub Pages
+- Works with GitHub Pages -->
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
