@@ -7,7 +7,7 @@
 <title>Chae-Yeon Heo</title>
 <style>
   :root{
-    --bg:#f7f6f2;
+    --bg:#f2ecf2;
     --card:#ffffff;
     --ink:#211f1b;
     --sub:#6b675f;
@@ -32,18 +32,27 @@
   p{margin:0 0 14px;}
 
   /* ---------- header ---------- */
-  h1{ font-size:29px; font-weight:700; margin:0 0 6px; }
-  .headline{ font-size:15px; color:var(--ink); font-weight:600; margin:0 0 2px; }
-  .role{ font-size:13.5px; color:var(--sub); margin:0 0 24px; }
+  h1{ font-size:29px; font-weight:700; margin:0; }
 
-  .intro{display:flex; gap:22px; align-items:flex-start;}
-  .intro img{
-    width:92px; height:92px; object-fit:cover;
-    border:1px solid var(--line); border-radius:2px; flex-shrink:0;
+  .header-top{
+    display:flex; justify-content:center; align-items:center;
+    gap:40px; margin-bottom:22px;
   }
-  .intro-text p{margin:0 0 12px; max-width:500px;}
+  .header-top img{
+    width:150px; height:150px; object-fit:cover; object-position:50% 22%;
+    border-radius:50%; flex-shrink:0;
+  }
+  @media (max-width:520px){
+    .header-top{flex-direction:column-reverse; align-items:flex-start;}
+    .header-top img{width:120px; height:120px;}
+  }
+
+  .bio-block p{margin:0 0 14px; text-align:justify;}
+  .interests{
+    font-size:15px; margin:0 0 14px;
+  }
+  .interests b{font-weight:700;}
   .contact{font-size:14px;}
-  @media (max-width:520px){ .intro{flex-direction:column;} }
 
   hr.top{border:none; border-top:1px solid var(--line); margin:36px 0 44px;}
 
@@ -53,6 +62,8 @@
     font-size:17px; font-weight:700; margin:0 0 18px;
     padding-bottom:8px; border-bottom:1px solid var(--line);
   }
+  h2.with-note{ display:flex; justify-content:space-between; align-items:baseline; gap:14px; flex-wrap:wrap; }
+  h2.with-note .note{ font-size:12px; font-weight:400; color:var(--sub); }
 
   /* ---------- timeline (News / Research Experience) ---------- */
   .timeline{position:relative; padding-left:24px;}
@@ -116,25 +127,22 @@
 <body>
 <div class="wrap">
 
-  <h1>Chae-Yeon Heo</h1>
-  <p class="headline sans">3D Vision Engineer</p>
-  <p class="role sans">Research Intern, Spatial AI Team, NAVER LABS</p>
-
-  <div class="intro">
+  <div class="header-top">
+    <h1>Chae-Yeon Heo</h1>
     <img src="images/ChaeYeonHeo.jpg" alt="Chae-Yeon Heo">
-    <div class="intro-text">
-      <p>Computer vision and generative AI researcher focused on making visual AI systems more controllable and reliable in the real world. My work connects high-level semantic understanding with practical, controllable image manipulation, spanning image restoration, inpainting, and generative editing, and I'm currently expanding into 3D vision, including 3D Gaussian Splatting and neural rendering.</p>
-      <p>I'm a Research Intern at NAVER LABS, working on 3D vision and generative AI, and hold an M.S. in AI Convergence from Chonnam National University, advised by Prof. Yeong-Jun Cho.</p>
-      <p>Open to research collaborations and conversations about vision and generative modeling. Feel free to reach out.</p>
-      <p class="contact sans">
-        <a href="mailto:cyeho001@gmail.com">Email</a> /
-        <a href="images/CV_Chaeyeon_eng.pdf">CV</a> /
-        <a href="https://scholar.google.com/citations?user=F-k-eDEAAAAJ">Google Scholar</a> /
-        <a href="https://github.com/chaeyeonheo">Github</a> /
-        <a href="https://www.linkedin.com/in/chaeyeon-heo">LinkedIn</a> /
-        <a href="https://velog.io/@luje/posts">Blog</a>
-      </p>
-    </div>
+  </div>
+
+  <div class="bio-block">
+    <p>Computer vision and generative AI researcher focused on making visual AI systems more controllable and reliable in the real world &mdash; connecting high-level semantic understanding with practical image restoration, inpainting, and generative editing, and expanding into 3D vision.</p>
+    <p class="interests"><b>Research Interests:</b> 3D Vision (3DGS), Generative AI, Computer Vision, Image Editing &amp; Restoration</p>
+    <p class="contact sans">
+      <a href="mailto:cyeho001@gmail.com">Email</a> /
+      <a href="images/CV_Chaeyeon_eng.pdf">CV</a> /
+      <a href="https://scholar.google.com/citations?user=F-k-eDEAAAAJ">Google Scholar</a> /
+      <a href="https://github.com/chaeyeonheo">Github</a> /
+      <a href="https://www.linkedin.com/in/chaeyeon-heo">LinkedIn</a> /
+      <a href="https://velog.io/@luje/posts">Blog</a>
+    </p>
   </div>
 
   <hr class="top">
@@ -144,25 +152,30 @@
     <div class="timeline">
       <div class="t-row"><span class="t-date sans">Sep 2026</span><span class="t-text">Joined NAVER LABS as a Research Intern on the Spatial AI Team.</span></div>
       <div class="t-row"><span class="t-date sans">Nov 2025</span><span class="t-text">One paper accepted to WACV 2026.</span></div>
-      <div class="t-row"><span class="t-date sans">2024 &ndash; 2026</span><span class="t-text">M.S. in AI Convergence, Chonnam National University.</span></div>
-      <div class="t-row"><span class="t-date sans">2021 &ndash; 2024</span><span class="t-text">B.S. in Artificial Intelligence, Chonnam National University.</span></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="t-row"><span class="t-date sans">Sep 2024 &ndash; Aug 2026</span><span class="t-text">M.S. in AI Convergence, Chonnam National University. Advised by Prof. Yeong-Jun Cho.</span></div>
+      <div class="t-row"><span class="t-date sans">Mar 2021 &ndash; Aug 2024</span><span class="t-text">B.S. in Artificial Intelligence, Chonnam National University.</span></div>
     </div>
   </section>
 
   <section id="publications">
-    <h2>Publications</h2>
-    <p class="sans" style="font-size:12.5px; color:var(--sub); margin:-10px 0 20px;">* corresponding author</p>
+    <h2 class="with-note"><span>Publications</span><span class="note sans">* corresponding author</span></h2>
 
     <div class="pub">
       <p class="pub-title">HG-Delegator: Harmonized Geometry Delegation for Cross-Frame Consistent Video Object Removal</p>
       <div class="badges-row"><span class="badge review">Under review</span></div>
-      <p class="pub-cite"><strong>Chae-Yeon Heo</strong>, Yeong-Jun Cho*. IEEE Transactions on Multimedia (TMM), 2026. Special Section on &ldquo;Multimodal Video Compression and Reconstruction: Theory, Algorithms, and Applications.&rdquo; <span class="metrics">IF 9.7 &middot; JCR Q1 &middot; top 3.1%</span></p>
+      <p class="pub-cite"><strong>Chae-Yeon Heo</strong>, Yeong-Jun Cho*.<br>IEEE Transactions on Multimedia (TMM), 2026. Special Section on &ldquo;Multimodal Video Compression and Reconstruction: Theory, Algorithms, and Applications.&rdquo; <span class="metrics">IF 9.7 &middot; JCR Q1 &middot; top 3.1%</span></p>
       <p class="pub-desc">Aligns visible background observations from multiple video frames in a shared 3D representation and reprojects them into each target view as a confidence-weighted prior, for cross-frame consistent video object removal.</p>
     </div>
 
     <div class="pub">
       <div class="badges-row"><span class="badge highlight">Double-blind review</span></div>
-      <p class="pub-cite">Under double-blind review at AAAI 2027. Title and author details are withheld until the review concludes.</p>
+      <p class="pub-cite"><strong>Chae-Yeon Heo</strong>, Yeong-Jun Cho*.<br>Under double-blind review at AAAI 2027. Title withheld until the review concludes.</p>
       <p class="pub-desc">It proposes a progressive large-mask image inpainting framework for diffusion-based restoration.</p>
     </div>
 
