@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Chae-Yeon Heo">
+<meta name="description" content="허채연의 연구 소개 및 대학원 지원 포트폴리오">
+<title>허채연 — 연구 포트폴리오</title>
+<style>
+  :root { --bg:#f7f6f2; --card:#fff; --ink:#211f1b; --sub:#6b675f; --line:#e4e0d5; --accent:#2b5940; --accent-soft:#eaf0ea; }
+  * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+  body { margin:0; padding:72px 24px 100px; background:var(--bg); color:var(--ink); font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Apple SD Gothic Neo","Malgun Gothic","Times New Roman",serif; font-size:17px; line-height:1.72; }
+  .sans { font-family:-apple-system,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",Helvetica,Arial,sans-serif; }
+  .wrap { max-width:700px; margin:0 auto; } a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; } a:hover { color:var(--ink); } p { margin:0 0 16px; }
+  header { margin-bottom:58px; } .tag { display:inline-block; margin-bottom:17px; padding:3px 10px; border-radius:20px; background:var(--accent-soft); color:var(--accent); font-size:11.5px; font-weight:700; letter-spacing:.03em; }
+  h1 { margin:0 0 8px; font-size:32px; letter-spacing:-.025em; } .role { margin:0 0 24px; color:var(--sub); font-size:14px; }
+  .intro { max-width:650px; color:#3a3833; font-size:18px; } .contact { margin-top:21px; font-size:13.5px; }
+  section { margin:61px 0; } h2 { margin:0 0 24px; padding-bottom:9px; border-bottom:1px solid var(--line); font-size:20px; } h3 { margin:30px 0 10px; color:#302e29; font-size:16.5px; } h3:first-child { margin-top:0; }
+  .statement p { max-width:660px; } blockquote { margin:27px 0; padding:5px 0 5px 19px; border-left:3px solid var(--accent); color:#3a3833; font-style:italic; }
+  .research-card { margin:14px 0; padding:20px 22px; border:1px solid var(--line); border-radius:10px; background:var(--card); box-shadow:0 1px 2px rgba(30,40,25,.05); } .research-card h3 { margin:0 0 8px; font-size:16.5px; line-height:1.42; } .research-card p { margin:0; color:var(--sub); font-size:14.5px; }
+  .badge { display:inline-block; margin-left:6px; padding:2px 8px; border-radius:20px; background:var(--accent-soft); color:var(--accent); font-family:-apple-system,"Segoe UI",sans-serif; font-size:10.5px; font-weight:700; vertical-align:2px; white-space:nowrap; }
+  .timeline { position:relative; padding-left:24px; } .timeline::before { content:""; position:absolute; top:6px; bottom:6px; left:3px; width:1px; background:var(--line); } .t-row { position:relative; padding:10px 0; } .t-row::before { content:""; position:absolute; top:17px; left:-24px; width:7px; height:7px; margin-left:-.5px; border-radius:50%; background:var(--accent); } .t-date { display:block; margin-bottom:2px; color:var(--sub); font-size:12.5px; } .t-text { font-size:15.5px; }
+  footer { margin-top:60px; padding-top:20px; border-top:1px solid var(--line); color:var(--sub); font-size:12.5px; }
+  @media (max-width:520px) { body { padding:50px 20px 70px; } h1 { font-size:29px; } }
+</style>
+</head>
+<body><div class="wrap">
+<header>
+  <div class="tag sans">Ph.D. Applicant · Computer Vision Researcher</div>
+  <h1>허채연 <span class="sans" style="font-size:18px;font-weight:500;color:var(--sub)">Chae-Yeon Heo</span></h1>
+  <p class="role sans">연구 소개 및 포트폴리오 · Computer Vision, Generative AI, 3D Vision</p>
+  <p class="intro">저는 그럴듯해 보이는 결과를 넘어, 실제 장면 구조에 근거한 복원·재구성 시스템을 만들고 싶습니다. 이 페이지는 그 질문을 따라온 연구 과정과 앞으로 확장하고 싶은 방향을 정리한 글입니다.</p>
+  <p class="contact sans"><a href="mailto:cyheo001@jnu.ac.kr">cyheo001@jnu.ac.kr</a> / <a href="https://chaeyeonheo.github.io/">Research homepage</a> / <a href="https://scholar.google.com/citations?user=F-k-eDEAAAAJ">Google Scholar</a> / <a href="https://github.com/chaeyeonheo">GitHub</a></p>
+</header>
+<section class="statement"><h2>연구 소개</h2>
+  <h3>왜 이 문제에 관심을 갖게 됐는가</h3>
+  <p>생성 모델은 이미지의 손상된 부분을 채우고 영상에서 물체를 지우는 작업을 놀라울 만큼 그럴듯하게 수행합니다. 그러나 그럴듯함과 정확함은 다릅니다. 모델이 참고할 시각적 단서가 거의 없을 때에도 불확실성을 드러내기보다 자신 있게 답을 만들어 내기 때문입니다. 제 연구는 이 간극을 좁히는 데서 시작했습니다. 보기에 자연스러운 결과가 아니라, 실제로 그 자리에 있었던 것을 복원하는 시스템을 만들고자 합니다.</p>
+  <h3>연구가 어떻게 발전해왔는가</h3>
+  <p><strong>CSF-Net</strong>(WACV 2026)에서는 이 문제를 이미지 단위에서 다뤘습니다. 대규모 마스크 인페인팅이 실패하는 한 이유는 전체 구조를 추론할 문맥이 너무 적은 상태에서 한 번에 결과를 생성하기 때문입니다. CSF-Net은 amodal completion 모델로 가려진 영역의 구조 후보를 먼저 만들고, transformer 기반 모듈로 이를 관측 영역과 융합합니다. 모델에게 아무것도 없는 곳에서 구조를 만들어 내라고 요구하는 대신, 활용할 수 있는 구조적 단서를 먼저 제공하는 접근입니다.</p>
+  <p>후속 연구에서는 큰 손상 영역을 객체 경계에 따라 분해하고 순차적으로 복원하는 diffusion 기반 프레임워크를 탐구했습니다. 각 단계가 이전 단계보다 신뢰도 높은 문맥을 갖도록 하고, 아직 복원되지 않은 영역의 영향을 줄이는 training-free attention 메커니즘을 적용했습니다. 해당 연구는 현재 double-blind review 중이므로 세부 내용은 공개하지 않습니다.</p>
+  <p>최근의 <strong>HG-Delegator</strong>(IEEE Transactions on Multimedia 심사 중)는 2D 구조적 가이드에서 실제 3D 근거로 나아갑니다. 비디오의 가려진 배경은 다른 프레임에서 이미 관측되었을 수 있습니다. HG-Delegator는 프레임별 관측을 하나의 3D 표현으로 정합한 뒤, 신뢰도 가중 prior로 각 목표 시점에 재투영합니다. 신뢰할 수 있는 기하학적 증거는 강하게 활용하고, 그렇지 않은 부분에서만 생성 prior에 의존하게 합니다.</p>
+  <blockquote>세 연구는 하나의 원칙으로 이어집니다. 생성 모델에게 모르는 것을 지어내라고 하지 않는다. 의미적·경계 기반·기하학적 구조 중 활용 가능한 근거가 있다면 먼저 제공하고, 생성은 정말 불확실한 부분에서만 작동하게 한다.</blockquote>
+  <h3>앞으로 하고 싶은 연구</h3>
+  <p>현재 NAVER LABS Spatial AI 팀에서 대규모 3D Gaussian Splatting 재구성에 diffusion prior를 적용하는 연구 인턴을 하며, 이 문제를 단일 이미지나 짧은 영상이 아닌 실제 공간의 규모에서 고민하고 있습니다. 관측된 기하 정보와 생성 prior 사이를 신뢰도에 따라 조율하는 방법을, 장면이 시간에 따라 변하고 모델이 계속해서 관측의 신뢰도를 판단해야 하는 동적·long-horizon 환경으로 확장하고 싶습니다.</p>
+</section>
+<section><h2>연구 궤적</h2>
+  <article class="research-card"><h3>CSF-Net: Context-Semantic Fusion Network for Large Mask Inpainting <span class="badge">WACV 2026</span></h3><p>Amodal completion을 대규모 마스크 복원의 의미적 가이드로 사용하고, amodal prior와 시각적 문맥을 transformer 모듈로 융합한 연구입니다.</p></article>
+  <article class="research-card"><h3>경계 기반 순차적 대규모 마스크 인페인팅 <span class="badge">Double-blind review</span></h3><p>객체 경계를 따라 마스크를 분해하고 순차적으로 복원하는 diffusion 기반 프레임워크입니다. 심사가 끝날 때까지 제목과 방법론은 비공개입니다.</p></article>
+  <article class="research-card"><h3>HG-Delegator: Harmonized Geometry Delegation for Cross-Frame Consistent Video Object Removal <span class="badge">IEEE TMM · under review</span></h3><p>여러 비디오 프레임의 배경 관측을 하나의 3D 표현으로 정합·재사용해, 프레임 간 일관된 물체 제거를 목표로 하는 신뢰도 기반 프레임워크입니다.</p></article>
+</section>
+<section><h2>연구 경력 및 학력</h2><div class="timeline"><div class="t-row"><span class="t-date sans">2026.09 – 2027.03 (expected)</span><span class="t-text">NAVER LABS Spatial AI Team, Research Intern — 대규모 3D Gaussian Splatting 재구성을 위한 diffusion prior 연구.</span></div><div class="t-row"><span class="t-date sans">2024.09 – 2026.08</span><span class="t-text">전남대학교 인공지능융합학과 석사, 조영준 교수 지도.</span></div><div class="t-row"><span class="t-date sans">2021.03 – 2024.08</span><span class="t-text">전남대학교 인공지능학부 인공지능전공 학사.</span></div></div></section>
+<section><h2>연락처</h2><p class="contact sans"><a href="mailto:cyheo001@jnu.ac.kr">cyheo001@jnu.ac.kr</a> · <a href="mailto:cyeho001@gmail.com">cyeho001@gmail.com</a> · <a href="https://chaeyeonheo.github.io/">chaeyeonheo.github.io</a> · <a href="https://scholar.google.com/citations?user=F-k-eDEAAAAJ">Google Scholar</a> · <a href="https://github.com/chaeyeonheo">GitHub</a> · <a href="https://www.linkedin.com/in/chaeyeon-heo">LinkedIn</a></p></section>
+<footer class="sans">Ph.D. 지원을 위한 연구 소개 및 포트폴리오</footer>
+</div></body>
+</html>
