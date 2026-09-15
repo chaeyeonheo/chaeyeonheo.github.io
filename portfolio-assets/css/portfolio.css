@@ -1,0 +1,41 @@
+/* Content layer for Chae-Yeon Heo's portfolio pages.
+   The layout, grid, navigation, banner and visual language are provided by HTML5 UP Strongly Typed. */
+body, input, textarea, select, button { font-family: 'Source Sans Pro', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+body { letter-spacing: -0.01em; }
+#header h1, #header h2, #features h2, #main h2, #footer h2, .paper-title { font-family: 'Arvo', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+#header { padding-bottom: 2.5em; }
+#header p { font-size: 1.15em; max-width: 48em; margin-left: auto; margin-right: auto; }
+#header .intro { color: #666; line-height: 1.7; }
+#header .identity { color: #ed786a; font-weight: 700; letter-spacing: .08em; font-size: .82em; text-transform: uppercase; }
+#header p, #header h1, #header h2, #features h2, #main h2, #footer h2, #main h3, #footer h3, .paper-title { letter-spacing: -0.02em; }
+#header .identity, .section-kicker { letter-spacing: .08em; }
+#banner { background-image: linear-gradient(rgba(67,58,51,.46), rgba(67,58,51,.46)), url('../../images/portfolio-banner.jpg'); }
+#banner p { line-height: 1.4; }
+.portfolio-section { padding: 4.5em 0; }
+.section-kicker { color: #ed786a; font-size: .82em; font-weight: 700; letter-spacing: .1em; margin: 0 0 .75em; text-transform: uppercase; }
+.feature-copy { font-size: .98em; line-height: 1.75; }
+.paper-card { border-top: solid 1px #e5e5e5; padding: 2em 0; }
+.paper-card:first-child { border-top: 0; padding-top: 0; }
+.paper-card header { margin-bottom: .8em; }
+.paper-card .date { margin-bottom: .85em; }
+.paper-title { color: #444; font-size: 1.18em; font-weight: 700; line-height: 1.45; margin: 0; }
+.paper-meta { color: #888; font-size: .94em; font-style: italic; margin: .45em 0 .8em; }
+.paper-card p { margin-bottom: .8em; line-height: 1.7; }
+.tag { background: #f9e2df; border-radius: 2px; color: #b55145; display: inline-block; font-size: .72em; font-weight: 700; letter-spacing: .04em; margin: 0 .35em .3em 0; padding: .22em .55em; text-transform: uppercase; }
+.tag.neutral { background: #ececec; color: #666; }
+.sidebar-note { background: #f7f7f7; border-left: solid 4px #ed786a; margin-bottom: 2em; padding: 1.25em 1.35em; }
+.sidebar-note h3 { margin-top: 0; }
+.sidebar-note p:last-child { margin-bottom: 0; }
+.detail-list { list-style: none; margin: 0; padding: 0; }
+.detail-list li { border-top: solid 1px #e5e5e5; padding: .8em 0; }
+.detail-list strong { color: #555; display: block; }
+.compact-actions .button { font-size: .85em; margin: 0 .45em .55em 0; padding: .65em 1.1em; }
+.research-statement { font-size: 1.08em; line-height: 1.85; }
+.trajectory { margin-top: 1.5em; }
+.trajectory-item { border-left: solid 3px #ed786a; margin: 0 0 1.3em .25em; padding: .1em 0 .1em 1.2em; }
+.trajectory-item h3 { margin: 0 0 .35em; }
+.trajectory-item p { margin: 0; }
+.profile-facts { font-size: .95em; }
+.profile-facts strong { color: #555; }
+.footer-links a { margin: 0 .35em; }
+@media screen and (max-width: 736px) { #header { padding-bottom: 1.5em; } .portfolio-section { padding: 3em 0; } #banner p { font-size: 1.35em; } }

@@ -1,113 +1,70 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Chae-Yeon Heo">
-<meta name="description" content="허채연의 컴퓨터 비전 및 응용 AI 엔지니어링 포트폴리오">
-<title>허채연 — 기업 포트폴리오</title>
-<style>
-  :root { --bg:#f7f6f2; --card:#fff; --ink:#211f1b; --sub:#6b675f; --line:#e4e0d5; --accent:#2b5940; --accent-soft:#eaf0ea; }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Apple SD Gothic Neo","Malgun Gothic","Times New Roman",serif; font-size:17px; line-height:1.7; }
-  .sans { font-family:-apple-system,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",Helvetica,Arial,sans-serif; }
-  .wrap { max-width:880px; margin:0 auto; padding:0 24px; }
-  a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
-  a:hover { color:var(--ink); }
-  nav { position:sticky; top:0; z-index:5; background:rgba(247,246,242,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
-  nav .wrap { min-height:60px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-  .brand { color:var(--ink); font-weight:700; text-decoration:none; }
-  .nav-links { display:flex; gap:18px; font-size:12px; font-weight:600; }
-  .nav-links a { color:var(--sub); text-decoration:none; }
-  .nav-links a:hover { color:var(--accent); }
-  header { padding:92px 0 70px; border-bottom:1px solid var(--line); }
-  .eyebrow { margin:0 0 15px; color:var(--accent); font-size:12px; font-weight:700; letter-spacing:.08em; }
-  h1 { max-width:740px; margin:0 0 22px; font-size:clamp(34px,5vw,50px); line-height:1.22; letter-spacing:-.035em; }
-  h1 em { color:var(--accent); font-style:normal; }
-  .intro { max-width:700px; margin:0; color:#3c3b37; font-size:18px; }
-  .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:38px 0 30px; }
-  .fact { padding:17px 18px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.6); }
-  .fact-label { display:block; margin-bottom:4px; color:var(--sub); font-size:11px; font-weight:700; letter-spacing:.04em; }
-  .fact-value { font-size:14px; font-weight:700; line-height:1.45; }
-  .jump { display:inline-block; padding:10px 15px; border:1px solid var(--accent); border-radius:22px; color:var(--accent); font-size:13px; font-weight:700; text-decoration:none; }
-  .jump:hover { background:var(--accent); color:#fff; }
-  section { padding:68px 0; border-bottom:1px solid var(--line); }
-  h2 { margin:0 0 26px; padding-bottom:9px; border-bottom:1px solid var(--line); font-size:21px; }
-  .section-lead { max-width:650px; margin:-9px 0 27px; color:var(--sub); }
-  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-  .card { padding:22px; border:1px solid var(--line); border-radius:10px; background:var(--card); box-shadow:0 1px 2px rgba(30,40,25,.05); }
-  .number { margin-bottom:14px; color:var(--accent); font-size:12px; font-weight:700; }
-  .card h3 { margin:0 0 10px; font-size:17px; line-height:1.4; }
-  .card p { margin:0; color:var(--sub); font-size:14.5px; }
-  .case { padding:28px 0; border-top:1px solid var(--line); }
-  .case:first-of-type { padding-top:0; border-top:0; }
-  .case-head { display:flex; justify-content:space-between; align-items:baseline; gap:18px; margin-bottom:18px; }
-  .case h3 { margin:0; font-size:19px; line-height:1.4; }
-  .period { flex:none; color:var(--sub); font-size:12.5px; font-weight:600; }
-  .case-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px 34px; }
-  .case-block h4 { margin:0 0 5px; color:var(--accent); font-family:inherit; font-size:12px; letter-spacing:.04em; }
-  .case-block p { margin:0; color:#3c3b37; font-size:14.5px; }
-  .case-block.full { grid-column:1 / -1; }
-  .takeaway { margin-top:18px; padding:12px 15px; border-left:3px solid var(--accent); background:var(--accent-soft); font-size:14px; }
-  .takeaway b { color:var(--accent); }
-  .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
-  .step { padding:5px 13px 5px 0; border-right:1px solid var(--line); }
-  .step:last-child { border:0; }
-  .step-no { display:block; margin-bottom:9px; color:var(--accent); font-size:12px; font-weight:700; }
-  .step strong { display:block; margin-bottom:5px; font-size:15px; }
-  .step p { margin:0; color:var(--sub); font-size:13.5px; }
-  .contact { border-bottom:0; }
-  .contact p { max-width:680px; margin:0 0 18px; }
-  .contact-links { font-size:14px; }
-  footer { padding:25px 0 45px; color:var(--sub); font-size:12px; }
-  @media (max-width:700px) { .nav-links { display:none; } header { padding:68px 0 52px; } .facts,.grid,.steps { grid-template-columns:1fr; } .step { padding:13px 0; border-right:0; border-bottom:1px solid var(--line); } .step:last-child { border-bottom:0; } .case-grid { grid-template-columns:1fr; } .case-block.full { grid-column:auto; } .case-head { display:block; } .period { display:block; margin-top:7px; } }
-</style>
+  <title>허채연 | Computer Vision Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="허채연의 컴퓨터 비전 및 생성형 AI 연구 포트폴리오" />
+  <link rel="stylesheet" href="portfolio-assets/css/main.css" />
+  <link rel="stylesheet" href="portfolio-assets/css/portfolio.css" />
 </head>
-<body>
-<nav><div class="wrap"><a class="brand" href="https://chaeyeonheo.github.io/">Chae-Yeon Heo</a><div class="nav-links sans"><a href="#strengths">강점</a><a href="#work">대표 작업</a><a href="#approach">일하는 방식</a><a href="#contact">연락처</a></div></div></nav>
-<main>
-<header><div class="wrap">
-  <p class="eyebrow sans">COMPUTER VISION · GENERATIVE AI · 3D VISION</p>
-  <h1>생성형 AI와 3D 비전을<br><em>실제로 동작하는 시스템</em>으로 만듭니다.</h1>
-  <p class="intro"><strong>허채연</strong>은 연구의 엄밀함과 제품 환경의 제약을 함께 이해하는 컴퓨터 비전 연구자입니다. 이미지 복원 모델부터 산업 안전 모니터링까지, 실제 실패 지점을 관찰하고 그것을 해결할 수 있는 간결한 모델과 파이프라인을 설계해 왔습니다.</p>
-  <div class="facts sans"><div class="fact"><span class="fact-label">CURRENT</span><span class="fact-value">NAVER LABS<br>Spatial AI Research Intern</span></div><div class="fact"><span class="fact-label">EDUCATION</span><span class="fact-value">M.S., AI Convergence<br>Chonnam National University</span></div><div class="fact"><span class="fact-label">FOCUS</span><span class="fact-value">Generative Restoration<br>&amp; Geometry-aware Vision</span></div></div>
-  <a class="jump sans" href="#work">대표 작업 보기 ↓</a>
-</div></header>
+<body class="homepage is-preload company-page">
+<div id="page-wrapper">
+  <section id="header"><div class="container">
+    <p class="identity">Chae-Yeon Heo · Computer Vision Researcher</p>
+    <h1 id="logo"><a href="https://chaeyeonheo.github.io/">허채연</a></h1>
+    <p>저는 생성 모델이 <strong>그럴듯한 결과</strong>를 만드는 데서 더 나아가,<br />실제 장면의 구조를 이해하고 신뢰할 수 있게 다루도록 연구합니다.</p>
+    <p class="intro">이미지·비디오 복원과 편집, 3D vision을 중심으로 연구를 수행해 왔습니다. 논문에서 검증한 방법을 실제 시각 AI 시스템의 문제로 연결하는 데 관심이 있습니다.</p>
+    <nav id="nav"><ul>
+      <li><a class="icon solid fa-home" href="#intro"><span>소개</span></a></li>
+      <li><a class="icon solid fa-file-alt" href="#papers"><span>대표 논문</span></a></li>
+      <li><a class="icon solid fa-flask" href="#capabilities"><span>연구 역량</span></a></li>
+      <li><a class="icon solid fa-address-card" href="#contact"><span>연락처</span></a></li>
+    </ul></nav>
+  </div></section>
 
-<section id="strengths"><div class="wrap">
-  <h2>연구를 응용으로 연결하는 세 가지 강점</h2>
-  <div class="grid">
-    <article class="card"><div class="number sans">01</div><h3>생성형 이미지·비디오 복원</h3><p>확산 모델과 transformer 기반 모델로, 손상된 영역을 그럴듯하게 채우는 데서 멈추지 않고 장면의 구조를 보존하는 복원을 설계합니다.</p></article>
-    <article class="card"><div class="number sans">02</div><h3>기하학 기반 비전</h3><p>여러 관측의 정보를 3D로 정합하고 재투영해, 2D 패턴만으로는 불안정한 복원에 실제 장면 구조라는 근거를 더합니다.</p></article>
-    <article class="card"><div class="number sans">03</div><h3>응용 ML 엔지니어링</h3><p>불완전한 데이터, 실시간 제약, 운영 중의 신뢰도까지 고려합니다. 모델 성능뿐 아니라 파이프라인 전체가 안정적으로 작동하는지를 평가합니다.</p></article>
-  </div>
-</div></section>
+  <section id="intro" class="portfolio-section"><div class="container">
+    <header><h2>생성형 모델의 <strong>신뢰도</strong>를 높이는 연구</h2></header>
+    <div class="row aln-center">
+      <div class="col-4 col-6-medium col-12-small"><section><span class="icon solid featured fa-object-group"></span><header><h3>Structure-aware Restoration</h3></header><p class="feature-copy">대규모 손상 영역에서 장면에 없던 물체를 만들어 내는 문제를 다룹니다. semantic prior와 관측 문맥을 결합해 복원의 구조적 정확도를 높입니다.</p></section></div>
+      <div class="col-4 col-6-medium col-12-small"><section><span class="icon solid featured fa-cubes"></span><header><h3>Geometry-aware Video Editing</h3></header><p class="feature-copy">여러 프레임에 흩어진 관측을 하나의 3D 근거로 정합해, 프레임 간 일관된 video object removal을 목표로 합니다.</p></section></div>
+      <div class="col-4 col-6-medium col-12-small"><section><span class="icon solid featured fa-vial"></span><header><h3>Research to Real Systems</h3></header><p class="feature-copy">문제 정의, 모델 설계, 데이터·실험 파이프라인, 논문 작성까지 연구 전 주기를 수행합니다. PyTorch, OpenCV, Docker와 Git 환경에 익숙합니다.</p></section></div>
+    </div>
+  </div></section>
 
-<section id="work"><div class="wrap">
-  <h2>대표 작업</h2>
-  <p class="section-lead">문제의 성격에 맞춰 모델을 고르는 것이 아니라, 먼저 실패의 원인을 정의하고 필요한 구조를 설계합니다.</p>
-  <article class="case">
-    <div class="case-head"><h3>CSF-Net: Context-Semantic Fusion Network for Large Mask Inpainting</h3><span class="period sans">WACV 2026 · First author</span></div>
-    <div class="case-grid"><div class="case-block"><h4 class="sans">PROBLEM</h4><p>대규모 마스크 인페인팅은 시각적 단서가 부족할 때 장면에 없던 물체를 만들어 내기 쉽습니다.</p></div><div class="case-block"><h4 class="sans">ROLE</h4><p>문제 정의, 모델 설계, 실험, 논문 작성까지 전 과정을 주도했습니다.</p></div><div class="case-block"><h4 class="sans">APPROACH</h4><p>Amodal completion으로 가려진 영역의 구조 후보를 먼저 얻고, transformer 모듈로 주변 맥락과 융합하는 plug-and-play 구조를 설계했습니다.</p></div><div class="case-block"><h4 class="sans">OUTCOME</h4><p>다양한 마스크 조건에서 물체 환각을 줄이고 구조적 정확도를 개선했습니다. WACV 2026에 게재되었습니다.</p></div></div>
-    <div class="takeaway"><b>핵심:</b> 더 큰 생성 모델보다, 생성 전에 제공하는 구조적 가이드가 더 효과적인 경우가 있습니다.</div>
-  </article>
-  <article class="case">
-    <div class="case-head"><h3>Single Image Reflection Removal</h3><span class="period sans">Samsung Electronics collaboration · 2024.09–2025.01</span></div>
-    <div class="case-grid"><div class="case-block"><h4 class="sans">PROBLEM</h4><p>세탁기 내부 카메라의 반사광이 이상 탐지 시스템에서 반복적인 false alarm을 일으켰습니다.</p></div><div class="case-block"><h4 class="sans">ROLE</h4><p>공동연구 프로젝트에서 반사 제거 모델 개발을 담당했습니다.</p></div><div class="case-block"><h4 class="sans">APPROACH</h4><p>운영 중인 탐지 모델을 다시 학습시키기보다, 입력 품질을 높이는 전처리 문제로 재정의해 cross-attention 기반 모델을 학습·튜닝했습니다.</p></div><div class="case-block"><h4 class="sans">OUTCOME</h4><p>반사로 인한 오탐을 줄여 모니터링 시스템의 신뢰도를 개선했습니다.</p></div></div>
-    <div class="takeaway"><b>핵심:</b> 파이프라인 전체를 바꾸기보다 실패 원인에 정확히 맞춘 전처리 모델 하나가 더 낮은 위험으로 문제를 해결할 수 있습니다.</div>
-  </article>
-  <article class="case">
-    <div class="case-head"><h3>산업 안전 이상 탐지 시스템</h3><span class="period sans">Independent project · 2026.07</span></div>
-    <div class="case-grid"><div class="case-block"><h4 class="sans">PROBLEM</h4><p>낙상·미끄러짐과 PPE·구역 위반처럼 성격이 다른 위험 상황을 실시간으로 감지하고 설명하는 시스템이 필요했습니다.</p></div><div class="case-block"><h4 class="sans">ROLE</h4><p>시스템 설계, 모델 선정, 데이터셋 구축과 평가를 단독으로 수행했습니다.</p></div><div class="case-block"><h4 class="sans">APPROACH</h4><p>시간적 사건인 낙상은 pose 기반 행동 인식으로, 공간적 상태인 PPE·구역 위반은 object detection으로 분리해 각각에 맞는 파이프라인을 설계했습니다.</p></div><div class="case-block"><h4 class="sans">OUTCOME</h4><p>AIHub 공사현장·CCTV 데이터로 end-to-end 파이프라인을 평가하고, 경보 신뢰도를 중심으로 한 이벤트 단위 평가를 설계했습니다.</p></div></div>
-    <div class="takeaway"><b>핵심:</b> 안전 시스템의 지표는 단순 정확도보다 사용자가 신뢰할 수 있는 경보를 만드는가에 있어야 합니다.</div>
-  </article>
-</div></section>
+  <section id="banner"><div class="container"><p>저는 <strong>보이지 않는 정보를 추측하는 생성</strong>과<br />관측된 근거를 활용하는 <strong>복원</strong> 사이의 간극을 좁히고자 합니다.</p></div></section>
 
-<section id="approach"><div class="wrap"><h2>일하는 방식</h2><div class="steps"><div class="step"><span class="step-no sans">01</span><strong>Discover</strong><p>실제로 반복되는 실패를 관찰합니다.</p></div><div class="step"><span class="step-no sans">02</span><strong>Define</strong><p>해결해야 할 문제를 작고 분명하게 정의합니다.</p></div><div class="step"><span class="step-no sans">03</span><strong>Design</strong><p>문제에 필요한 가장 간결한 모델과 평가를 설계합니다.</p></div><div class="step"><span class="step-no sans">04</span><strong>Deliver</strong><p>실제 사용 환경의 기준으로 검증하고 개선합니다.</p></div></div></div></section>
+  <section id="main"><div class="container"><div class="row">
+    <div id="content" class="col-8 col-12-medium">
+      <p class="section-kicker">Selected publications</p><header><h2 id="papers">대표 논문</h2></header>
+      <article class="paper-card">
+        <header><span class="date">Published · WACV 2026</span><h3 class="paper-title">CSF-Net: Context-Semantic Fusion Network for Large Mask Inpainting</h3></header>
+        <span class="tag">First author</span><span class="tag neutral">Large-mask inpainting</span>
+        <p class="paper-meta">Chae-Yeon Heo, Yeong-Jun Cho*. IEEE/CVF Winter Conference on Applications of Computer Vision, 2026.</p>
+        <p>대규모 마스크 인페인팅에서 발생하는 object hallucination을 줄이기 위해, amodal completion으로 얻은 semantic prior를 transformer 기반 fusion module로 시각적 문맥과 결합했습니다. “무엇을 생성할지”보다 “무엇을 근거로 복원할지”를 먼저 설계한 연구입니다.</p>
+        <ul class="actions compact-actions"><li><a class="button icon solid fa-external-link-alt" href="https://chaeyeonheo.github.io/CSF-Net/">Project</a></li><li><a class="button icon solid fa-file-pdf" href="https://openaccess.thecvf.com/content/WACV2026/papers/Heo_CSF-Net_Context-Semantic_Fusion_Network_for_Large_Mask_Inpainting_WACV_2026_paper.pdf">Paper</a></li><li><a class="button icon brands fa-github" href="https://github.com/chaeyeonheo/CSF-Net">Code</a></li></ul>
+      </article>
+      <article class="paper-card">
+        <header><span class="date">Under review · IEEE TMM 2026</span><h3 class="paper-title">HG-Delegator: Harmonized Geometry Delegation for Cross-Frame Consistent Video Object Removal</h3></header>
+        <span class="tag">First author</span><span class="tag neutral">3D video editing</span>
+        <p class="paper-meta">Chae-Yeon Heo, Yeong-Jun Cho*. IEEE Transactions on Multimedia, Special Section on Multimodal Video Compression and Reconstruction.</p>
+        <p>여러 video frame에서 관측된 배경을 shared 3D representation에 정합하고, 이를 confidence-weighted prior로 각 target view에 재투영합니다. 신뢰 가능한 기하학적 근거를 우선 사용해 cross-frame consistency를 높이는 framework입니다.</p>
+      </article>
+      <article class="paper-card">
+        <header><span class="date">Under double-blind review · AAAI 2027</span><h3 class="paper-title">Progressive Large-mask Image Inpainting Framework</h3></header>
+        <span class="tag">First author</span><span class="tag neutral">Diffusion restoration</span>
+        <p class="paper-meta">Chae-Yeon Heo, Yeong-Jun Cho*. 제목과 세부 방법론은 double-blind review 종료 전까지 비공개입니다.</p>
+        <p>객체 경계를 따라 큰 마스크를 분해하고 순차적으로 복원하며, 아직 복원되지 않은 영역의 영향을 낮추는 training-free attention mechanism을 탐구합니다.</p>
+      </article>
+    </div>
+    <div id="sidebar" class="col-4 col-12-medium">
+      <section class="sidebar-note"><h3>Research profile</h3><p>전남대학교 인공지능융합학과 석사 과정에서 조영준 교수의 지도를 받았으며, 현재 NAVER LABS Spatial AI 팀에서 Research Intern으로 연구하고 있습니다.</p></section>
+      <section><header><h3>학력 및 경력</h3></header><ul class="detail-list"><li><strong>NAVER LABS</strong><span>Spatial AI Team · Research Intern<br />Sep 2026 – Mar 2027 (expected)</span></li><li><strong>Chonnam National University</strong><span>M.S. in AI Convergence<br />Sep 2024 – Aug 2026 · GPA 4.31/4.5</span></li><li><strong>Chonnam National University</strong><span>B.S. in Artificial Intelligence<br />Mar 2021 – Aug 2024</span></li></ul></section>
+      <section id="capabilities"><header><h3>기술 역량</h3></header><ul class="detail-list"><li><strong>Research</strong><span>Generative Models, Image &amp; Video Restoration, 3D Vision</span></li><li><strong>Frameworks</strong><span>PyTorch, OpenCV, HuggingFace, NumPy</span></li><li><strong>Tools</strong><span>Python, Git, Linux, Docker, LaTeX</span></li></ul></section>
+    </div>
+  </div></div></section>
 
-<section id="contact" class="contact"><div class="wrap"><h2>Contact</h2><p>생성형 모델과 3D 비전을 실제 환경에서 신뢰할 수 있게 만드는 문제에 관심이 있습니다. 컴퓨터 비전·응용 AI 엔지니어링 포지션에 대해 이야기 나누고 싶습니다.</p><p class="contact-links sans"><a href="mailto:cyeho001@gmail.com">cyeho001@gmail.com</a> · <a href="https://www.linkedin.com/in/chaeyeon-heo">LinkedIn</a> · <a href="https://github.com/chaeyeonheo">GitHub</a> · <a href="https://scholar.google.com/citations?user=F-k-eDEAAAAJ">Google Scholar</a> · <a href="https://chaeyeonheo.github.io/">Research homepage</a></p></div></section>
-</main>
-<footer><div class="wrap sans">© 2026 Chae-Yeon Heo</div></footer>
-</body>
-</html>
+  <section id="footer"><div class="container"><header><h2 id="contact">함께 이야기하고 싶습니다.</h2></header><p>생성형 AI, image/video editing, 3D vision 연구와 응용에 관한 협업 또는 포지션 제안을 환영합니다.</p><p class="footer-links"><a href="mailto:cyeho001@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/chaeyeon-heo">LinkedIn</a> · <a href="https://github.com/chaeyeonheo">GitHub</a> · <a href="https://scholar.google.com/citations?user=F-k-eDEAAAAJ">Google Scholar</a> · <a href="https://chaeyeonheo.github.io/">Homepage</a></p><div id="copyright"><ul class="links"><li>&copy; Chae-Yeon Heo</li><li>Design: <a href="https://html5up.net">HTML5 UP</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CCA 3.0</a></li></ul></div></div></section>
+</div>
+<script src="portfolio-assets/js/jquery.min.js"></script><script src="portfolio-assets/js/jquery.dropotron.min.js"></script><script src="portfolio-assets/js/browser.min.js"></script><script src="portfolio-assets/js/breakpoints.min.js"></script><script src="portfolio-assets/js/util.js"></script><script src="portfolio-assets/js/main.js"></script>
+</body></html>
